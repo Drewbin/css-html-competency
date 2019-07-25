@@ -25,7 +25,7 @@
 /* 31D grid */
 .grid-container {
     display: grid;
-    grid-template-columns : 300px 300px 300px;
+    grid-template-columns : 400px 400px 400px;
     grid-gap: 5px;
     background-color: mintcream;
     padding: 10px;
@@ -52,7 +52,7 @@
 
 .header {
     font-weight: bolder;
-    margin-top: 50px;
+    margin-top: 5px;
     border: 2px dotted yellow;
     height: 5vh;
     
@@ -101,13 +101,14 @@
 .div3 {
     /* 25C-3 position: fixed */
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 50px;
+    top: 10vh;
+    left: 40vw;
+    width: 75px;
+    height: 250px;
     display: inline-block;
     background-color: red;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-wrap: normal;
     text-align: center;
     /* 28D transition */
     transition: width 2s;
@@ -115,7 +116,7 @@
 
 /* 26H hover */
 .div3:hover {
-    width: 600px;
+    width: 250px;
 }
 
 
@@ -125,7 +126,7 @@
     height: 15.6vh;
     background-image: linear-gradient( to right, greenyellow, aquamarine, aqua );
     left: 3vw;
-    top: 15vh;
+    top: 12vh;
     /* 30-C box-shadow */
     box-shadow: 5px 10px 15px darkslategray;
     
@@ -141,16 +142,21 @@ input:focus {
     background-color: orange;
 }
 
-
+/* 26E disabled */
 input[type='text']:disabled {
     background-color: olive
+}
+
+/* 26L nth-child */
+p:nth-child(1) {
+    background-color: darkkhaki;
 }
 
 
 /* 28C keyframes */
 @keyframes mover {
     0% {top: 0px; background: palevioletred; }
-    50% {top: 200px; background: rgb(179, 28, 28); }
+    50% {top: 168px; background: rgb(179, 28, 28); }
     100% {top: 0px; background: orange; }
 }
 

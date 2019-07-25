@@ -1,29 +1,106 @@
+<!-- 60E PageRank - an algorithm used by Google Search to rank web pages in their search engine results -->
+<!-- 60C, 60D, 60E SEO - Search Engine Optimization. The practice of making your web page easy for users to find when doing a web search -->
+
+<!-- 54J attributes...basically everywhere -->
+
+<!-- 54I-1, 2, 3 html head body -->
 <!DOCTYPE html>
 <html lang="en">
     <head> 
         <meta charset="utf-8">
+        <!-- 58D 60C description -->
+        <meta name="description" content="Showing off HTML/CSS skills">
+        <!-- 58E 60D keywords -->
+        <meta name="keywords" content="HTML & CSS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 58C title -->
         <title>HTML & CSS Competency Page of Awesomesauce</title>
+        <!-- 54H link tag -->
         <link rel="stylesheet" href="./index.css">
     </head>
-    <h1 class="header">Check out this sexy header!</h1>
-    
+        
     <body class="Example">
+            <!-- 54F-1 h1 -->
+            <h1  class="header">Check out this sexy header!</h1>
+            <!-- 54F-2 h2 -->
+            <h2  class="header"> This is less sexy...</h2>
+        <!-- 54C-3 div -->
         <div class="flex-container">
             <div class="div1"></div>
             <div class="div2">Supercalifragilisticexpialidocious!</div>
             <div class="div3"><b>Red box of unmoving joy</b></div>
             <div class="div4"></div>  
         </div>
-
+        
         <div class="grid-container">
+            
             <form class="form">
                 First name: <input type="text"><br>
                 Last name: <input type="text"><br>
-                Fav color: <input type='text' disabled='disabled' value='Rainbow'>
+                <!-- 59C ARIA -->
+                Fav color: <input type='text' disabled='disabled' value='Rainbow' aria-disabled="true">
             </form>
-            <div>HI</div>
-            <div>HERRO</div>
-            <div>Richie</div>
+            <div>
+                <!-- 54C-1 p -->
+                <!-- 54C-2 span -->
+                <p>Check out this nth <span style="color:red">red-headed </span>step child.</p>
+                <p>Favorite Movies: </p>
+                <!-- 54E-1 lists -->
+                <ul>
+                    <!-- 55C built in tag -->
+                    <li>Goonies</li>
+                    <li>Lord of the Rings</li>
+                    <li>Wedding Crashers</li>
+                </ul>
+                <p>Favorite Games: </p>
+                <ol>
+                    <li>WoW</li>
+                    <li>Warcraft 3</li>
+                    <li>Dr. Mario</li>
+                </ol>
+                <!-- 61C script -->
+                <p id="demo"></p>
+                <script>
+                    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                </script>
+            </div>
+            <div>
+                <!-- 54E-2 images  -->
+                <!-- 59E alt -->
+                <img src="goat.jpg" width='300' height='300' alt='Happy goat'>
+            </div>
+            <!-- 54D-1 article -->
+            <article>
+                <h3>What is HTML and CSS?</h3>
+                <!-- 54D-2 section -->
+                <section>
+                    <!-- 55D custom tag -->
+                    <p1>
+                        It's how you make stuff pretty...I mean check this page OUT!
+                    </p1>
+                </section>
+                <!-- 54G self closing tag -->
+                <br>
+                <!-- 54D-3 footer -->
+                <footer>
+                    <p3>Copyright Drew Johnson Enterprises 2019</p3>
+                </footer>
+            </article>
+
+            <div>
+                <!-- 56C video -->
+                <video width="400" height="400" controls>
+                    <source src='cartwheel.mp4' type='video/mp4'>
+                </video>
+            </div>
+
+            <div>
+                <!-- 56D audio -->
+                <audio controls>
+                    <source src="wah-wah-trumpet.wav" type="audio/wav">
+                </audio>
+            </div>
+            
         </div>
     </body>
 </html>
