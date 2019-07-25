@@ -1,13 +1,61 @@
+:root {
+    /* 31C variables */
+    --main-bg-color: lightslategray;
+}
+
+
+
 .Example {
     padding-top: 50px;
-    background-color: lightslategray;
+    /* 31C variables */
+    background-color: var(--main-bg-color);
     width: 100%;
     min-height: 100vh;
     display: -ms-flexbox;
     /* 25F display */
     display: flex;
-    -ms-flex-pack: center;
+    /* 27D align-items */
+    align-items: top;
+    /* 27C justify-content */
     justify-content: center;
+    /* 27E flex-wrap */
+    flex-wrap: wrap;
+}
+
+/* 31D grid */
+.grid-container {
+    display: grid;
+    grid-template-columns : 300px 300px 300px;
+    grid-gap: 5px;
+    background-color: mintcream;
+    padding: 10px;
+    
+}
+
+.grid-container > div {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.flex-container {
+    /* 27G display: flex */
+    display: flex;
+    /* 27F flex-direction */
+    flex-direction: row-reverse;
+}
+
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+}
+
+.header {
+    font-weight: bolder;
+    margin-top: 50px;
+    border: 2px dotted yellow;
+    height: 5vh;
+    
 }
 
 .div1 {
@@ -18,16 +66,19 @@
     /* 24C margin */
     margin: 10px;
     /* 24D border */
-    border: 2px solid darkred;
+    border: 6px solid darkred;
     /* 24Fbox-sizing */
     box-sizing: border-box;
     /* 25D float */
     float: right;
+    text-align: center;
+    /* 28E transform */
+    transform: rotate(10deg);
 }
 
 .div2 {
     width: 100px;
-    height: 200px;
+    height: 180px;
     /* 23E background-color */
     background-color: darkgoldenrod;
     /* 23F background-image */
@@ -39,6 +90,75 @@
     font-size: 20px;
     /* 23D-2 color */
     color: black;
+    /* 25C-1 position: relative */
     position: relative;
     left: 20px;
+    animation: mover 3s infinite;
+    /* 30E text effects */
+    word-wrap: break-word;
 }
+
+.div3 {
+    /* 25C-3 position: fixed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 50px;
+    display: inline-block;
+    background-color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    /* 28D transition */
+    transition: width 2s;
+}
+
+/* 26H hover */
+.div3:hover {
+    width: 600px;
+}
+
+
+.div4 {
+    position: absolute;
+    width: 15.6vh;
+    height: 15.6vh;
+    background-image: linear-gradient( to right, greenyellow, aquamarine, aqua );
+    left: 3vw;
+    top: 15vh;
+    /* 30-C box-shadow */
+    box-shadow: 5px 10px 15px darkslategray;
+    
+}
+
+
+.form {
+    color: brown;
+}
+
+/* 26G focus */
+input:focus {
+    background-color: orange;
+}
+
+
+input[type='text']:disabled {
+    background-color: olive
+}
+
+
+/* 28C keyframes */
+@keyframes mover {
+    0% {top: 0px; background: palevioletred; }
+    50% {top: 200px; background: rgb(179, 28, 28); }
+    100% {top: 0px; background: orange; }
+}
+
+/* 29C media queries */
+/* 29D media types */
+@media screen and (max-width: 480px) {
+    .Example {
+        background-color: plum;
+    }
+}
+
